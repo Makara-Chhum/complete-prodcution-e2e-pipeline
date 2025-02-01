@@ -30,7 +30,7 @@ pipeline {
 
         stage("Checkout from SCM"){
             steps {
-                git branch : 'main', credentialsId: 'github', url: 'https://github.com/Makara-Chhum/complete-prodcution-e2e-pipeline'
+                git branch : 'main', credentialsId: 'github', url: 'https://github.com/Makara-Chhum/complete-prodcution-e2e-pipeline.git'
             }
         }
 
@@ -65,7 +65,7 @@ pipeline {
 
         }
 
-        stage("Build & Push Docker Image to Dockerhub test") {
+        stage("Build & Push Docker Image to Dockerhub") {
             steps {
                 script {
                     // build docker image
